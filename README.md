@@ -1,2 +1,2 @@
-# Benchmark-EEG-dataset-for-P300-speller
+# A Benchmark EEG Dataset for P300 Speller Brain-Computer Interfaces
  
