@@ -13,12 +13,26 @@
  
  ## 3. External dependancy
  #### For Matlab code, users can extract features and evaluate P300 speller performance, but users can draw more intuitive plots, such as multi-channel EEG plot and  scalp topography with EEGLAB toolbox (https://sccn.ucsd.edu/eeglab/index.php).
- #### For Python code, users need to install the follwing moduels: matplotlib, scipy, h5py, mat73, sklearn, </br>>> pip install [module name]
+ #### For Python code, users need to install the follwing moduels: matplotlib, scipy, h5py, mat73, sklearn, 
+ ```
+ >> pip install [module name]
+ ```
  
  ## 4. Get started
- ### - Matlab
- #### 1) RSVP
+ #### At first, download EEG and make directory named "data" in ./Matlab or ./Python. Otherwise you can specify your filepath in the scripts
+ ```
+ ./Matlab/data/s01.mat
+ ...
  
+ or
  
- ### - Python
+ ./Python/data/s01.mat
+ ...
+ ```
+ ### Matlab
  #### 1) RSVP
+ #### 2) P300 speller
+ 
+ ### Python
+ #### 1) RSVP
+ #### 2) P300 speller
