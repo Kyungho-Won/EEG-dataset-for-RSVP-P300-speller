@@ -77,11 +77,6 @@ feat_column = np.array(range(feat_train.shape[1]))
 print(feat_train.shape)
 print(feat_train[3, 1:10])
 
-
-np.save('haha.npy', feat_train)
-
-
-
 feat_best_column, stats_best = classifier.stepwise_linear_model(feat_train, feat_column, y_train, 0.08)
 print(feat_best_column.shape)
 print(np.max(stats_best.pvalues))
