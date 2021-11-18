@@ -110,38 +110,37 @@ disp('done');
 
 %% load
 
-%%
-figure,
-t = linspace(Params_P3speller.baseline(1), Params_P3speller.frame(2), size(cur_target, 2));
-avg_target = mean(grand_target, 3)';
-avg_nontarget = mean(grand_nontarget, 3)';
+SpellerERP_grand = load('SpellerERP_grand.mat');
 
-std_target = std(grand_target, [], 3)';
-std_nontarget = std(grand_nontarget, [], 3)';
-vis_ERP(t, mean(avg_target(:, interest_ch),2), mean(avg_nontarget(:, interest_ch),2), ...
+%% ERP
+Params_P3speller = struct('freq', [1 10], 'frame', [0 1000], ...
+    'baseline', [-200 0], 'select_ch', 1:32, 'srate', 512);
+electrodes_midline = {'FZ', 'Cz', 'Pz'};
+chanlocs = importdata('biosemi32_locs.mat');
+interest_ch = ismember({chanlocs.labels}, electrodes_midline);
+
+figure,
+t = linspace(Params_P3speller.baseline(1), Params_P3speller.frame(2), size(SpellerERP_grand.target, 2));
+avg_target = mean(SpellerERP_grand.target, 3)';
+avg_nontarget = mean(SpellerERP_grand.nontarget, 3)';
+
+std_target = std(SpellerERP_grand.target, [], 3)';
+std_nontarget = std(SpellerERP_grand.nontarget, [], 3)';
+
+grand_Target = mean(avg_target(:, interest_ch),2);
+grand_Nontarget = mean(avg_nontarget(:, interest_ch),2);
+vis_ERP(t, grand_Target, grand_Nontarget, ...
     Params_P3speller.baseline, 0:200:1000, std_target(:, interest_ch), std_nontarget(:, interest_ch), 'off');
 yline(0);
 legend({'Target', 'Non-target'});
+
+%% Time topo
 
 topo3D = cat(3, avg_target', avg_nontarget');
 clim = [-1 1];
 frames = 0:200:1200;
 figure,
-vis_temporalTopoplot(topo3D, cur_eeg.srate, frames, cur_eeg.chanlocs, clim);
-colormap(redblue);
-
-%% topo3D
-
-%% color bar
-clim = [-3 3];
-figure,
-axis off;
-caxis(clim);
-cb = colorbar;
-cb.Label.String = '\muV';
-set(gca, 'fontsize', 13, 'fontweight', 'bold');
-cb.Ticks = linspace(min(clim), max(clim), 3);
-pbaspect([5 1 1]);
+vis_temporalTopoplot(topo3D, Params_P3speller.srate, frames, chanlocs, clim);
 colormap(redblue);
 
 
