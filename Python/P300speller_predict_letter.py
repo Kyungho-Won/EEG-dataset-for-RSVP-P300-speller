@@ -16,7 +16,7 @@ frame = [0, 600] # in ms
 # One need to specify data directory
 data_dir = "/Volumes/T5_2TB/Matlab_workspace/P3BCI2017_current/Won2021/data/"
 
-nsub = 1
+nsub = 10
 EEG = mat73.loadmat(data_dir+'s{:02d}.mat'.format(int(nsub)))
 
 # PART 1 -  Pre-processing for training EEG
@@ -71,13 +71,13 @@ np.random.shuffle(idx_train)
 feat_train = feat_train[idx_train, :]
 y_train = y_train[idx_train, :]
 
-# Train linear classifier and save the model
+# Train linear classifier and save the model - can apply own classification model
 feat_column = np.array(range(feat_train.shape[1]))
 feat_best_column, stats_best = classifier.stepwise_linear_model(feat_train, feat_column, y_train, 0.08)
 print(feat_best_column.shape)
 
 argsort_pval = np.argsort(stats_best.pvalues)
-feat_selec_column = feat_best_column[argsort_pval[range(60)]]
+feat_selec_column = feat_best_column[argsort_pval[range(60)]] # will only use the best 60 features
 feat_train_select = feat_train[:, feat_selec_column]
 
 mdl_linear = LinearRegression()
@@ -117,7 +117,7 @@ for n_test in range(len(EEG['test'])):
     feat_unknown = feat_unknown.transpose()
 
     # opt - calculate the all classification results from feat_unknown
-    pred_unknown = mdl_linear.predict(feat_unknown[:, feat_selec_column]) # your answers
+    pred_unknown = mdl_linear.predict(feat_unknown[:, feat_selec_column]) # your answers // can apply own classification algorithm
     ans_letters = preproc.detect_letter_P3speller(pred_unknown, word_len, cur_eeg['text_to_spell'], letter_idx, markers_seq, Config_P3speller)
     cur_text_result = ans_letters['text_result']
 
