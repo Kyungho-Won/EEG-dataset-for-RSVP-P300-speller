@@ -13,7 +13,7 @@
  
  ## 3. External dependancy
  #### For Matlab code, users can extract features and evaluate P300 speller performance, but users can draw more intuitive plots, such as multi-channel EEG plot and  scalp topography with EEGLAB toolbox (https://sccn.ucsd.edu/eeglab/index.php).
- #### For Python code, users need to install the follwing moduels: matplotlib, scipy, h5py, mat73, sklearn, 
+ #### For Python code, users need to install the follwing moduels: matplotlib, scipy, h5py, mat73, sklearn, statsmodels
  ```
  >> pip install [module name]
  ```
