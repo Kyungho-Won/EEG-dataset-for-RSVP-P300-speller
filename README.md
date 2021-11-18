@@ -20,7 +20,8 @@
  #### We note that our results in the data note were produced with Matlab. One can use Python script to extract feature and evaluate P300 speller performance, but the results maybe different. Temporal scalp tography is only shown in Matlab with EEGLAB toolbox.
  
  ## 4. Get started
- #### At first, download EEG and make directory named "data" in ./Matlab or ./Python. Otherwise you can specify your filepath in the scripts
+ #### At first, download EEG and make directory named "data" in ./Matlab or ./Python. Otherwise you can specify your filepath in the scripts.
+ #### Second, add paths for ./functions for ./Matlab or ./Python
  ```
  ./Matlab/data/s01.mat
  ...
@@ -47,7 +48,15 @@
  ```
  ./Python/
  - Load_Won2021dataset.ipynb
- - main.py
  ```
  #### 1) RSVP
+  ```
+ ./Python/
+ - RSVP_visualization_ERP.py # to extract RSVP ERP
+ ```
  #### 2) P300 speller
+  ```
+ ./Python/
+ - P300speller_visualization_ERP.py # to extract P300 speller ERP
+ - P300speller_predict_letter.py # to evaluate P300 speller performance
+ ```
