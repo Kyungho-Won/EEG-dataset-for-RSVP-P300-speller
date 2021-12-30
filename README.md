@@ -1,8 +1,6 @@
 # EEG Dataset for P300 Speller Brain-Computer Interfaces
  
  #### This includes Matlab and Python code to extract features from RSVP and P300 speller EEG, and evaluate letter detection accuracy in P300 speller with the open EEG dataset that will be published (in submission).
- ![image](https://user-images.githubusercontent.com/34480950/141660475-b262803d-b867-4ff1-ad82-59f5a63b0c69.png)
-
  
  ## 1. Dataset
  #### This code aims to analyize EEG data collected during RSVP and P300 speller sessions. For more information, please refer to the data note (in submission)
