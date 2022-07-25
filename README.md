@@ -1,9 +1,11 @@
 # EEG Dataset for RSVP and P300 Speller Brain-Computer Interfaces
  
- #### This includes Matlab and Python code to extract features from RSVP and P300 speller EEG, and evaluate letter detection accuracy in P300 speller with the open EEG dataset that will be published (in submission).
+ #### This includes Matlab and Python code to extract features from RSVP and P300 speller EEG, and evaluate letter detection accuracy in P300 speller with the open EEG dataset.
+ 
+ #### EEG Dataset for RSVP and P300 Speller Brain-Computer Interfaces, https://doi.org/10.1038/s41597-022-01509-w
  
  ## 1. Dataset
- #### This code aims to analyize EEG data collected during RSVP and P300 speller sessions. For more information, please refer to the data note (in submission)
+ #### This code aims to analyize EEG data collected during RSVP and P300 speller sessions. For more information, please refer to the data note.
  
  ## 2. Preprocessing and Feature extraction
  #### From RSVP and P300 speller EEG, users are able to extract event-related potentials (ERPs) during target events while non-target events show non-notable changes.
