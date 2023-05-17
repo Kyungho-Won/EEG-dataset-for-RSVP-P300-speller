@@ -3,7 +3,7 @@
  #### This includes Matlab and Python code to extract features from RSVP and P300 speller EEG, and evaluate letter detection accuracy in P300 speller with the open EEG dataset.
  
  #### EEG Dataset for RSVP and P300 Speller Brain-Computer Interfaces, https://doi.org/10.1038/s41597-022-01509-w
- #### Won, K., Kwon, M., Ahn, M. et al. EEG Dataset for RSVP and P300 Speller Brain-Computer Interfaces. Sci Data 9, 388 (2022). https://doi.org/10.1038/s41597-022-01509-w
+ #### Cite as: Won, K., Kwon, M., Ahn, M. et al. EEG Dataset for RSVP and P300 Speller Brain-Computer Interfaces. Sci Data 9, 388 (2022). https://doi.org/10.1038/s41597-022-01509-w
  
  ## 1. Dataset
  #### This code aims to analyize EEG data collected during RSVP and P300 speller sessions. For more information, please refer to the data note.
@@ -22,7 +22,7 @@
  
  ## 4. Get started
  #### At first, download EEG and make directory named "data" in ./Matlab or ./Python. Otherwise you can specify your filepath in the scripts.
- #### To get details of this dataset, please use the paper mentioned above. You can download this dataset in _figshare_, open-access repository here: https://www.nature.com/articles/s41597-022-01509-w#citeas  
+ #### To get details of this dataset, please use the paper mentioned above. You can download this dataset in _figshare_, open-access repository here: https://doi.org/10.6084/m9.figshare.c.5769449.v1 if you cannot find it
  #### Second, add paths for ./functions for ./Matlab or ./Python
  ```
  ./Matlab/data/s01.mat
