@@ -33,7 +33,7 @@
  ./Python/data/s01.mat
  ...
  ```
- ### Matlab (support whole functionality)
+ ### Matlab
  #### 1) RSVP </br> Run each block (separted by '%%') in the script using the keyboard shortcut (ctrl + Enter for Windows, cmd + Enter for Mac)
  ```
  ./Matlab/
