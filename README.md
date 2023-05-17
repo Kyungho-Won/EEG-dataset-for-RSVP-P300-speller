@@ -33,7 +33,7 @@
  ./Python/data/s01.mat
  ...
  ```
- ### Matlab
+ ### Matlab (support whole functionality)
  #### 1) RSVP </br> Run each block (separted by '%%') in the script using the keyboard shortcut (ctrl + Enter for Windows, cmd + Enter for Mac)
  ```
  ./Matlab/
@@ -45,7 +45,7 @@
  - P300speller_visualization_ERP.m # to extract P300 speller ERP
  - P300speller_predict_letter.m # to evaluate P300 speller performance
  ```
- ### Python (Under modification)
+ ### Python (topogratphy not supported)
  #### One can use Google Colab or Jupyter notebook (*.ipynb).
  ```
  ./Python/
